@@ -225,6 +225,12 @@ nav a:hover,
   padding: 0.45rem 0.7rem;
 }
 
+.visa-note {
+  margin: 1.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .section-block {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -333,7 +339,41 @@ nav a:hover,
 }
 
 .expertise-note {
+  grid-column: 1 / -1;
   background: var(--panel-light);
+}
+
+.technology-tenure {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.technology-tenure span {
+  display: flex;
+  flex-direction: column;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.technology-tenure strong {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.tenure-note {
+  margin: 0.8rem 0 0 !important;
+  font-size: 0.7rem !important;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--line);
 }
 
 .ai-section {
@@ -403,12 +443,38 @@ nav a:hover,
 
 .project-topline {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
+.project-location-tag {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid #495a3e;
+  border-radius: 3px;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
 .project-number {
   color: #748279;
+}
+
+.project-unavailable,
+.privacy-note {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.project-unavailable {
+  margin-top: 1.3rem !important;
+}
+
+.privacy-note {
+  margin: 1.5rem 0 0;
 }
 
 .project-content {
@@ -526,6 +592,17 @@ nav a:hover,
   font-weight: 800;
 }
 
+.personal-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-top: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 24%);
+}
+
 .app-store-link {
   display: inline-flex;
   align-items: center;
@@ -590,7 +667,7 @@ nav a:hover,
 
 .education-card {
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   padding: clamp(1.3rem, 3vw, 2rem);
   border: 1px solid var(--line);
@@ -674,6 +751,10 @@ nav a:hover,
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .project-content,
   .leadership-section {
     grid-template-columns: 1fr;
@@ -736,6 +817,8 @@ nav a:hover,
   }
 
   .expertise-grid,
+  .impact-grid,
+  .impact-grid,
   .project-grid,
   .personal-grid {
     grid-template-columns: 1fr;
