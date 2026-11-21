@@ -223,6 +223,56 @@ nav a:hover,
   color: var(--muted);
 }
 
+.experience-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 2rem;
+  padding: 1.7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-dates {
+  margin: 0.25rem 0 0;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.experience-dates span {
+  color: var(--muted);
+}
+
+.experience-details h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+}
+
+.experience-location {
+  margin: 0.15rem 0 0.65rem !important;
+  color: #8d9b91 !important;
+  font-size: 0.76rem !important;
+}
+
+.experience-details > p {
+  margin: 0.45rem 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.experience-details strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -563,6 +613,11 @@ nav a:hover,
   .leadership-section {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
   }
 
   .project-detail {
