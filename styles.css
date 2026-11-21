@@ -215,22 +215,30 @@ nav a:hover,
 }
 
 .hero-social-links a {
-  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.8rem;
   font-weight: 600;
   text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
 }
 
 .hero-social-linkedin {
   color: #70b7ff;
+  background: rgb(112 183 255 / 8%);
 }
 
 .hero-social-github {
   color: var(--accent);
+  background: rgb(196 243 106 / 8%);
 }
 
 .hero-social-links a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  transform: translateY(-2px);
 }
 
 .hero-tags {
