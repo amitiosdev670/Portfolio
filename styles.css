@@ -215,14 +215,22 @@ nav a:hover,
 }
 
 .hero-social-links a {
-  color: var(--muted);
   font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
 }
 
-.hero-social-links a:hover {
+.hero-social-linkedin {
+  color: #70b7ff;
+}
+
+.hero-social-github {
   color: var(--accent);
+}
+
+.hero-social-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .hero-tags {
