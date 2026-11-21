@@ -435,12 +435,6 @@ nav a:hover,
   line-height: 1.2;
 }
 
-.project-subtitle {
-  color: var(--muted);
-  font-size: 0.8em;
-  font-weight: 500;
-}
-
 .personal-card > p {
   color: var(--muted);
   font-size: 0.88rem;
