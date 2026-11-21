@@ -103,6 +103,35 @@ nav a:hover,
   padding-bottom: clamp(5rem, 10vw, 8rem);
 }
 
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 235px;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.hero-intro {
+  min-width: 0;
+}
+
+.hero-portrait {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 28%);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 24%;
+}
+
 .eyebrow,
 .project-type,
 .project-number,
@@ -559,6 +588,36 @@ nav a:hover,
   font-size: 0.85rem;
 }
 
+.education-card {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1fr;
+  gap: 1.5rem;
+  padding: clamp(1.3rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.education-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: -0.035em;
+}
+
+.education-card > div > p:last-child {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.education-card .education-label {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .contact-section {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -603,6 +662,12 @@ nav a:hover,
   .ai-section {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .hero-layout {
+    grid-template-columns: minmax(0, 1fr) 180px;
+    gap: 1.5rem;
+    align-items: start;
   }
 
   .expertise-grid {
@@ -657,10 +722,28 @@ nav a:hover,
     padding-top: 4rem;
   }
 
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-portrait {
+    grid-row: 1;
+    width: 135px;
+  }
+
+  .hero-intro {
+    grid-row: 2;
+  }
+
   .expertise-grid,
   .project-grid,
   .personal-grid {
     grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
   .project-grid .project-card {
